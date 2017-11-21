@@ -1,0 +1,23 @@
+Servico Rest em Java utilizando basic authentication:
+	username: admin
+	password: admin
+Media Type: application/json
+
+
+Método para inserir uma entrega
+Tipo : POST
+url: localhost:8080/TrabalhoDM107JavaRest/rest/apiEntrega/
+	retorna um json com com status 200 - sucesso e 500 erro interno
+	consome um json - exemplo: { 
+				"numero_pedido":1,
+				"nome_recebedor":"Fulano 1",
+				"cpf_recebedor":"11111111111",
+				"data_entrega":"2017-02-01"
+				}
+================================================================================
+
+Método para buscar uma entrega através do número do pedido
+Tipo: GET
+url: localhost:8080/TrabalhoDM107JavaRest/rest/apiEntrega/entrega_por_pedido/{numero_pedido}
+	deve passar o numero do pedido na url ({numero_pedido})
+	retorna um json da entrega com com status 200 - sucesso  ou 500 - erro interno
